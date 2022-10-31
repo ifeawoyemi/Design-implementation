@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --white: #fff;
+    --linear-gradient: #6448fe to #600594;
+    --red-error: #ff5252;
+    --light-grayish-violet: #dedddf;
+    --dark-grayish-violet: #8e8593;
+    --very-dark-violet: #21092f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--dark-grayish-violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+#error_message{
+    color: red;
+    font-size: 14px;
+    visibility: hidden;
+}
+
+.main_container{
+    background-color: var(--white);
+    width: 320px;
+    position: relative;
+    height: 100vh;
+}
+
+.image_container #img2{
+    display: none;
+}
+
+.image_container #cardBack{
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    width: 73%;
+}
+
+.image_container #cardFront{
+    position: absolute;
+    top: 20.5%;
+    left: 7%;
+    z-index: 2;
+    width: 73%;
+    
+}
+
+.backDigit{
+    position: absolute;
+    top: 18%;
+    right: 14%;
+    color: var(--white);
+    font-size: 8.5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+} 
+
+.logo{
+    position: absolute;
+    top: 21.5%;
+    left: 13%;
+    z-index: 2;
+    width: 14%;
+}
+
+#digit{
+    position: absolute;
+    top: 31%;
+    left: 13%;
+    z-index: 2;
+    letter-spacing: 1.5px;
+    color: var(--white);
+}
+
+#cardName{
+    position: absolute;
+    top: 36%;
+    left: 13%;
+    z-index: 2;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+#data{
+    position: absolute;
+    top: 36%;
+    right: 23%;
+    z-index: 2;
+    font-size: 9px;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.form_container{
+    padding-top: 15px;
+    margin: 25px;
+}
+
+.container{
+    padding-top: 10px;
+}
+
+.container .special{
+    display: flex;
+}
+
+.container .special input {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.container #num{
+    width: 128px;
+}
+
+input{
+    width: 250px;
+    height: 35px;
+    outline: none;
+    border: 0.5px solid var(--light-grayish-violet);
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 12px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+::-webkit-input-placeholder{
+    color: var(--light-grayish-violet);
+}
+
+label{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button{
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    width: 250px;
+    height: 35px;
+    margin-top: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#complete{
+    position: absolute;
+    top: 49%;
+    left: 0;
+    width: 350px;
+    text-align: center;
+    display: none;
+}
+
+.attribution {
+   font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 1024px){
+    .main_container{
+        display: grid;
+        grid-template-columns: 350px 600px;
+        width: 950px;
+        height: 550px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #img1{
+        display: none;
+    }
+
+    .image_container #img2{
+        display: block;
+        width: 100%;
+    }
+
+    .image_container #cardFront{
+        width: 33%;
+        top: 16%;
+        left: 12%;
+    }
+
+    .image_container #cardBack{
+        width: 33%;
+        left: 18%;
+        top: 50%;
+    }  
+
+    .logo{
+        width: 7%;
+        top: 19%;
+        left: 15%;
+    }
+
+    #digit{
+        top: 35%;
+        left: 15%;
+        letter-spacing: 2px;
+    }
+
+    #cardName{
+        top: 41%;
+        left: 15%;
+    }
+
+    #data{
+        top: 41%;
+        left: 36%;
+    }
+
+    .backDigit{
+        top: 65%;
+        left: 45%;
+    }
+
+    .form_container{
+        padding-top: 8rem;
+        padding-left: 10rem;
+    }
+
+    .container{
+        padding-top: 19px;
+    }
+
+    input{
+        margin-top: 7px;
+    }
+
+    button{
+        height: 35px;
+        margin-top: 25px;
+    }
+
+    .complete{
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 28%;
+        right: 7%;
+    }
+
+    .complete h1{
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .complete p{
+        font-size: 15px;
+        color: var(--dark-grayish-violet);
+    }
+
+    #complete{
+        display: none;
+    }
+}

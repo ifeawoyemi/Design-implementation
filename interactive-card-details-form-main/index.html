@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main_container">
+    <div class="image_container">
+      <img src="images\bg-main-mobile.png" id="img1" alt="" srcset="">
+      <img src="images\bg-main-desktop.png" id="img2" alt="">
+      <img src="images\bg-card-front.png" id="cardFront" alt="">
+      <img src="images\bg-card-back.png" id="cardBack" alt="">
+    </div>
+
+    <!-- <picture>
+    <source media="(min-width: 320px)" src="images\bg-main-mobile.png">
+    </picture> -->
+
+    <section>
+      <div class="card_digit">
+        <img src="images\card-logo.svg" class="logo" alt="">
+        <p id="digit">0000 0000 0000 0000</p>
+        <p id="cardName"> Jane Appleseed</p>
+        <p id="data"><span  id="mmData">00</span>/ <span id="yyData">00</span></p>
+          <p class="backDigit">
+            000
+          </p>
+    </div>
+    
+      <div class="form_container">
+       <form action="" class="form">
+
+        <div class="container">
+          <label for="name">Cardholder Name</label>
+          <br>
+        <input type="text" id="nameInput" placeholder="e.g. Jane Appleseed">
+        <p id="error_message">Error</p>  
+      </div>
+        
+        <div class="container">
+          <label for="">Card Number</label>
+          <br>
+          <input type="number" id="cardNumberInput" placeholder="e.g. 1234 5678 9123 0000" onKeyDown="if(this.value.length==16) return false;" >    
+          <p id="error_message">Error</p>  
+        </div>
+
+        <div class="container">
+          <label for="number"> Exp. Date (MM/YY)
+            <span>CVC</span></label>
+            <div class="special">
+              <input type="number" id="mm" placeholder="MM" onKeyDown="if(this.value.length==2) return false;" >
+              <input type="number" id="yy" placeholder="YY" onKeyDown="if(this.value.length==2) return false;">
+              <input type="number" id="num" placeholder="e.g. 123" onclick="if(this.value.length==3) return false;" >
+              <br><br>
+              <p id="error_message">Error</p>  
+            </div>
+        </div>
+       
+        <button type="submit" id="submitBtn">Confirm</button>
+       </form>
+
+      </div>
+    
+      <!-- Completed state start -->
+    
+     <div class="complete hidden" id="complete">
+      <img src="images\icon-complete.svg" alt="">
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button type="submit" id="ContinueBtn" >Continue</button>
+     </div>
+    </section>
+      
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
